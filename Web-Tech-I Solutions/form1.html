@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+function validateForm() {
+    let name = document.forms["myForm"]["name"].value.trim();
+    let email = document.forms["myForm"]["email"].value.trim();
+    let country = document.forms["myForm"]["country"].value;
+    let gender = document.forms["myForm"]["gender"].value;
+
+    // a. Name validation: only alphabets + space, exactly 8 characters
+    let namePattern = /^[A-Za-z ]{8}$/;
+    if (!namePattern.test(name)) {
+        alert("Name must be 8 characters long and contain only alphabets/spaces.");
+        return false;
+    }
+
+    // b. Email validation
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // c. Gender validation
+    if (gender === "") {
+        alert("Please select a gender.");
+        return false;
+    }
+
+    // d. Country validation
+    if (country === "") {
+        alert("Please select a country.");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="return validateForm()">
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="text" name="email"><br><br>
+    Country:
+    <select name="country">
+        <option value="">--Select--</option>
+        <option value="Nepal">Nepal</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+    </select><br><br>
+    Gender:
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female<br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hide/Show Divs</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+        background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+    <center>
+
+  <button id="hideBtn">Hide</button>
+  <button id="showBtn">Show</button>
+
+  <div class="hide">This is a hidden div.</div>
+  <div class="hide">Another hidden div.</div>
+
+  <script>
+    $(document).ready(function(){
+      $("#hideBtn").click(function(){
+        $(".hide").hide();
+      });
+      $("#showBtn").click(function(){
+        $(".hide").show();
+      });
+    });
+  </script>
+  </center>
+</body>
+</html>

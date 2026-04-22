@@ -1,0 +1,39 @@
+#red{
+    background-color: red;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    width: 30%;
+    float: left;
+    
+}
+
+#yellow{
+    background-color: yellow;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    width: 30%;
+    float: left;
+}
+
+#purple{
+    background-color: purple;
+    height: 120px;
+    /* clear: both; */
+    padding-top: 35px;
+    text-align: center;
+    font-size: 40px;
+    width: 40%;
+    float: right;
+    
+}
+
+#orange{
+    background-color: orange;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    width: 60%;
+    float: left;
+}
